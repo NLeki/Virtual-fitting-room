@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Virtual Dressing Room</title>
+        <link rel="stylesheet" href="style.css"/>
+        <script src="https://kit.fontawesome.com/686304ebc7.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Roboto+Condensed&display=swap" rel="stylesheet">
+        </head>
+        <body>
+            <!-------navbar section-->
+            <nav class="navbar">
+            <div class="navbar__container">
+                <a href="/" id="navbar__logo"><i class="fa fa-hat-cowboy"></i>ARCAM</a>
+                <div class="navbar__toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                 </div>
+                 <ul class="navbar__menu">
+                    <li class="navbar__items">
+                        <a href="/" class="navbar__links">Home</a>
+                    </li>
+                    <li class="navbar__items">
+                        <a href="bag.html" class="navbar__links">Bag</a>
+                    </li>
+                    <li class="navbar__items">
+                        <a href="shop.html" class="navbar__links">Shop</a>
+                    </li>
+                    <li class="navbar__btn">
+                        <a href="signeup.html" class="button">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+      
+<!-------------------------------Bag------------------->
+<div class="shopping-bag-container">
+    <h2>Your Shopping Bag</h2>
+    
+    <ul class="bag-items" id="bagItems">
+        <!-- Items will be dynamically added here -->
+    </ul>
+</div>
+    <div class="totale">
+        <p id="totalMessage">Your shopping bag is empty.</p>
+        <!-- Placeholder for payment button -->
+        <button onclick="processPayment()">Add Items</button>
+    </div>
+
+<!-- Payment Modal (Placeholder) -->
+<div id="paymentModel" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+<!-- Payment form and details go here -->
+        <h3>Payment Details</h3>
+        <!-- Add form fields, payment API integration, etc. -->
+    </div>
+</div>
+
+
+
+ <!--Payment Method Options-->
+     
+                
+            </label> 
+            <div class="container">
+
+                <form action="">
+            
+                    <div class="row">
+                        
+                        <div class="col">
+            
+                            <h3 class="title">billing address</h3>
+            
+                            <div class="inputBox">
+                                <span>full name :</span>
+                                <input type="text" placeholder="john deo">
+                            </div>
+                            <div class="inputBox">
+                                <span>email :</span>
+                                <input type="email" placeholder="example@example.com">
+                            </div>
+                            <div class="inputBox">
+                                <span>address :</span>
+                                <input type="text" placeholder="room - street - locality">
+                            </div>
+                            <div class="inputBox">
+                                <span>city :</span>
+                                <input type="text" placeholder="London">
+                            </div>
+            
+                            <div class="flex">
+                                <div class="inputBox">
+                                    <span>state :</span>
+                                    <input type="text" placeholder="United Kingdom">
+                                </div>
+                                <div class="inputBox">
+                                    <span>zip code :</span>
+                                    <input type="text" placeholder="E14 6NG">
+                                </div>
+                            </div>
+            
+                        </div>
+            
+                        <div class="col">
+            
+                            <h3 class="title">payment</h3>
+            
+                            <div class="inputBox">
+                                <span>cards accepted :</span>
+                                <img src="images/card_img.png" alt="">
+                            </div>
+                            <div class="inputBox">
+                                <span>name on card :</span>
+                                <input type="text" placeholder="mr. john deo">
+                            </div>
+                            <div class="inputBox">
+                                <span>credit card number :</span>
+                                <input type="number" placeholder="1111-2222-3333-4444">
+                            </div>
+                            <div class="inputBox">
+                                <span>exp month :</span>
+                                <input type="text" placeholder="january">
+                            </div>
+            
+                            <div class="flex">
+                                <div class="inputBox">
+                                    <span>exp year :</span>
+                                    <input type="number" placeholder="2022">
+                                </div>
+                                <div class="inputBox">
+                                    <span>CVV :</span>
+                                    <input type="text" placeholder="1234">
+                                </div>
+                            </div>
+            
+                        </div>
+                
+                    </div>
+            
+                    <input type="submit" value="Proceed to Checkout" class="submit-btn">
+            
+                </form>
+            
+            </div>   
+  
+         <!------>
+        
+        <!-- Add form fields, payment API integration, etc. -->
+        
+
+
+<!--footer section-->
+<div class="footer__container">
+    <div class="footer__links">
+       <div class="footer__link--wrapper">
+        <div class="footer__link--items">
+           <h2>About Us</h2> 
+           <a href="/">How it Works</a>
+           <a href="/">Testimonials</a>
+           <a href="/">Careers</a>
+           <a href="/">Investments</a>
+           <a href="/">Terms of Service</a>
+        </div>
+        <div class="footer__link--items">
+           <h2>About Us</h2> 
+           <a href="/">How it Works</a>
+           <a href="/">Testimonials</a>
+           <a href="/">Careers</a>
+           <a href="/">Investments</a>
+           <a href="/">Terms of Service</a>
+        </div>
+       </div>
+       <div class="footer__link--wrapper">
+        <div class="footer__link--items">
+           <h2>About Us</h2> 
+           <a href="/">How it Works</a>
+           <a href="/">Testimonials</a>
+           <a href="/">Careers</a>
+           <a href="/">Investments</a>
+           <a href="/">Terms of Service</a>
+        </div>
+        <div class="footer__link--items">
+           <h2>About Us</h2> 
+           <a href="/">How it Works</a>
+           <a href="/">Testimonials</a>
+           <a href="/">Careers</a>
+           <a href="/">Investments</a>
+           <a href="/">Terms of Service</a>
+        </div>
+       </div>  
+    </div>
+    <div class="social__media">
+        <div class="social__media--wrap">
+            <div class="footer__logo">
+                <a href="/" id="footer__logo"><i class="fa fa-hat-cowboy"></i>
+               Next </a>
+            </div>
+            <p class="website__rights"> &#169 Next 2020. All rights reserved</p>
+            <div class="social__icons">
+                <a href="/" class="social__icon--link" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="/" class="social__icon--link" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="/" class="social__icon--link" target="_blank">
+                    <i class="fab fa-Twitter"></i>
+                </a>
+                <a href="/" class="social__icon--link" target="_blank">
+                    <i class="fab fa-Linkdin"></i>
+                </a>
+                <a href="/" class="social__icon--link" target="_blank">
+                    <i class="fab fa-Youtube"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+  <!-- Include necessary scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet"></script>
+        <script src="Fitting.js"></script>
+        <script src="script.js" defer></script>
+        <!-- <script>TensorFlow.js</script> -->
+        </body>
+</html>

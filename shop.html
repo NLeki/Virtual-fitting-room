@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Virtual Dressing Room</title>
+        <link rel="stylesheet" href="style.css"/>
+        <script src="https://kit.fontawesome.com/686304ebc7.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Roboto+Condensed&display=swap" rel="stylesheet">
+        </head>
+        <body>
+            <!-------navbar section-->
+            <nav class="navbar">
+            <div class="navbar__container">
+                <a href="/" id="navbar__logo"><i class="fa fa-hat-cowboy"></i>ARCAM</a>
+                <div class="navbar__toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                 </div>
+                 <ul class="navbar__menu">
+                    <li class="navbar__items">
+                        <a href="/" class="navbar__links">Home</a>
+                    </li>
+                    <li class="navbar__items">
+                        <a href="/bag.html" class="navbar__links">bag</a>
+                    </li>
+                    <li class="navbar__items">
+                        <a href="shop.html" class="navbar__links">Shop</a>
+                    </li>
+                    <li class="navbar__btn">
+                        <a href="signeup.html" class="button">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!---Hero Section---->
+        <div class="main">
+            <div class="main__container">
+                <div class="main__content">
+                    <h1>MEET YOUR BEST CHOICE OF PRODUCT</h1>
+                    <p>Choose your clothes.</p>
+               </div>
+               
+               <div class="main__img--container">
+                <video autoplay loop muted plays-inline>
+                    <source src="images/istockphoto-1334324035-640_adpp_is.mp4" alt="video/mp4" id="main__img">
+        </video>
+                </div>
+
+                <a-scene
+                    vr-mode-ui="enabled: false;"
+                    renderer="logarithmicDepthBuffer: true; precision: medium;"
+                    embedded
+                    arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;">
+                   <!---- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server-->
+                        <a-nft
+                        type="nft"
+                        url="your-server/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/trex-image/trex"
+                        smooth="true"
+                        smoothCount="10"
+                        smoothTolerance=".01"
+                        smoothThreshold="5"
+                    >
+                        <a-entity
+                            gltf-model="your-server/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
+                            scale="5 5 5"
+                            position="150 300 -100"
+                        >
+                        </a-entity>
+                    </a-nft>
+                    <a-entity camera></a-entity>
+                </a-scene>
+              <!----  Body Capture: Video Feed-->
+             <video id="video-feed" width="640" height="480" autoplay></video>
+            
+                <!-- Clothing Overlay: Virtual Clothing -->
+              <div id="virtual-clothing"></div>
+            
+                <!-- Interactivity: Controls -->
+              
+ </a>
+                </div>
+            </div>
+      </div>
+
+<!--------shopping page-->
+<!---Here starts the camera code-->
+
+<!-- Body Capture: Video Feed -->
+
+<a-scene
+    vr-mode-ui="enabled: false;"
+    renderer="logarithmicDepthBuffer: true; precision: medium;"
+    embedded
+    arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+>
+   
+  <a-nft
+        type="nft"
+        url="your-server/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/trex-image/trex"
+        smooth="true"
+        smoothCount="10"
+        smoothTolerance=".01"
+        smoothThreshold="5"
+    >
+        <a-entity
+            gltf-model="your-server/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
+            scale="5 5 5"
+            position="150 300 -100"
+        >
+        </a-entity>
+    </a-nft>
+    <a-entity camera></a-entity>
+
+</a-scene>
+<div class="virtual-clothing">
+    <video id="video-feed" width="640" height="480" autoplay></video>
+    <canvas id="canvas" width="640" height="480"></canvas>
+    <button id="startCamera">Start Camera</button>
+    <button id="stopCamera" disabled>Stop Camera</button>
+    <!-- Clothing Overlay: Virtual Clothing -->
+     </div>
+
+
+<!----here finishs the camera-->
+
+
+<div class="shopping-container">
+        <div class="product-card">
+            <img src="images/shirt1.jpg" alt="Product 1">
+            <h3>Man Cotton Shirt</h3>
+            <p class="price">$20.99</p>
+            <button>Add to Cart</button>
+        </div>
+    
+        <div class="product-card">
+            <img src="images/jeans1.jpg" alt="Product 2">
+            <h3>Women Fit Jeans</h3>
+            <p class="price">$25.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+                <img src="images/mansuit.jpg" alt="Product 2">
+                <h3>Man Mix and Mutch</h3>
+                <p class="price">$150.49</p>
+                <button>Add to Cart</button>
+        </div>
+    
+        <!-- Add more product cards as needed -->
+    
+    </div>
+<!--footer section-->
+<div class="footer__container">
+    <div class="footer__links">
+       <div class="footer__link--wrapper">
+        <div class="footer__link--items">
+           <h2>About Us</h2> 
+           <a href="/">How it Works</a>
+           <a href="/">Testimonials</a>
+           <a href="/">Careers</a>
+           <a href="/">Investments</a>
+           <a href="/">Terms of Service</a>
+        </div>
+        <div class="footer__link--items">
+           <h2>About Us</h2> 
+           <a href="/">How it Works</a>
+           <a href="/">Testimonials</a>
+           <a href="/">Careers</a>
+           <a href="/">Investments</a>
+           <a href="/">Terms of Service</a>
+        </div>
+       </div>
+       <div class="footer__link--wrapper">
+        <div class="footer__link--items">
+           <h2>About Us</h2> 
+           <a href="/">How it Works</a>
+           <a href="/">Testimonials</a>
+           <a href="/">Careers</a>
+           <a href="/">Investments</a>
+           <a href="/">Terms of Service</a>
+        </div>
+        <div class="footer__link--items">
+           <h2>About Us</h2> 
+           <a href="/">How it Works</a>
+           <a href="/">Testimonials</a>
+           <a href="/">Careers</a>
+           <a href="/">Investments</a>
+           <a href="/">Terms of Service</a>
+        </div>
+       </div>  
+    </div>
+    <div class="social__media">
+        <div class="social__media--wrap">
+            <div class="footer__logo">
+                <a href="/" id="footer__logo"><i class="fa fa-hat-cowboy"></i>
+               Next </a>
+            </div>
+            <p class="website__rights"> &#169 Next 2020. All rights reserved</p>
+            <div class="social__icons">
+                <a href="/" class="social__icon--link" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="/" class="social__icon--link" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="/" class="social__icon--link" target="_blank">
+                    <i class="fab fa-Twitter"></i>
+                </a>
+                <a href="/" class="social__icon--link" target="_blank">
+                    <i class="fab fa-Linkdin"></i>
+                </a>
+                <a href="/" class="social__icon--link" target="_blank">
+                    <i class="fab fa-Youtube"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <script src="Fitting.js"></script>
+        <!-- <script>TensorFlow.js</script> -->
+        <script src="script.js" defer></script>
+        </body>
+</html>
